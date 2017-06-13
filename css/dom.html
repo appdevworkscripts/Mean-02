@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		.success{
+			color:green;
+		}
+		</style>
+	</head>
+	<body>
+	
+		<p>Hello</p>
+	
+	
+	
+		<input type="number" id="num1">
+		<input type="number" id="num2">
+		<button id="addBtn">+</button>
+		<button id="subBtn">-</button>
+		<button id="mulBtn">X</button>
+		<button id="divBtn">/</button>
+		<p id="result">
+	
+		</p>
+		<script>
+			//var p=document.querySelector('p');
+			//p.innerHTML='Bye';
+			//p.style.color='yellow';
+			var num1=document.querySelector('#num1');
+			var num2=document.querySelector('#num2');
+			var result=document.querySelector('#result');
+			var addBtn=document.querySelector('#addBtn');
+			addBtn.onclick=function(){
+				var finalData=parseFloat(num1.value)+parseFloat(num2.value);
+				result.innerHTML=finalData;
+			}
+			var subBtn=document.querySelector('#subBtn');
+			subBtn.onclick=function(){
+				var finalData=parseFloat(num1.value)-parseFloat(num2.value);
+				result.innerHTML=finalData;
+			}
+			var mulBtn=document.querySelector('#mulBtn');
+			mulBtn.onclick=function(){
+				var finalData=parseFloat(num1.value)*parseFloat(num2.value);
+				result.innerHTML=finalData;
+			}
+			var divBtn=document.querySelector('#divBtn');
+			divBtn.onclick=function(){
+				var finalData=parseFloat(num1.value)/parseFloat(num2.value);
+				result.innerHTML=finalData;
+			}
+			
+		</script>
+	</body>
+</html>
