@@ -1,0 +1,32 @@
+
+<strong>B Page {{44+5}}</strong>
+<h1>Second Page</h1>
+<a href="#!/c/34">C</a>
+<a href="#!/d?id=34&mid=78">D</a>
+<input ng-model="test">
+<button ng-click="myClick()">Click</button>
+
+{{num | currency:'&#x20b9; '}}<br />
+{{mydate | date:'dd/MM/yyyy'}} <br />
+
+<br />
+<input ng-model="myfilter" />
+<table>
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Roll</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="student in students | filter:myfilter | orderBy :'-name' | limitTo :4">
+			<td>{{student.name | rev}}</td>
+			<td>{{student.roll}}</td>
+		</tr>
+	</tbody>
+</table>
+<pre>
+{{obj | json}}
+</pre>
+
+
