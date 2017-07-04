@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+	<head>	
+		<link rel="stylesheet" href="css/bootstrap.min.css" >
+		<style>
+			input.ng-touched.ng-invalid{
+				background:red;
+			}
+			input.ng-valid{
+				border:1px solid green;
+			}
+			input.ng-valid:focus{
+				border:1px solid green;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="container-fluid">
+			Routing App
+			<br>
+			<div style="float:right">
+				<a href="#!/form">Form</a> 
+			</div>
+		</header>
+		<section ng-view style="margin:30px; min-height:500px;" class="container">
+		</section>
+		<footer class="container-fluid">
+			&copy; 2017
+		</footer>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/angular-messages.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<form name="contactForm" ng-submit="contactForm.$valid && formSubmit()" novalidate>
+			<div class="form-group">
+				<label>Name</label>
+				<input name="studentname" class="form-control" ng-model="contact.name" required minlength="5" pattern="^[A-Z].*">
+				<span ng-show="(contactForm.$submitted || contactForm.studentname.$touched) && contactForm.studentname.$error.required">
+					Name is required
+				</span>
+				<span ng-show="(contactForm.$submitted || contactForm.studentname.$touched) && contactForm.studentname.$error.minlength">
+					Name should atleast contain 5 characters
+				</span>
+				<span ng-show="(contactForm.$submitted || contactForm.studentname.$touched) && contactForm.studentname.$error.pattern">
+					Name should start with a capital letter.
+				</span>
+			</div>
+			<div class="form-group">
+				<label>Phone Number</label>
+				<input name="phone" class="form-control" ng-model="contact.phone" required minlength="10" maxlength="10" pattern="^\d{10}$">
+				<span ng-show="contactForm.$submitted || contactForm.phone.$touched" ng-messages="contactForm.phone.$error">
+					<span ng-message="required">Phone is required</span>
+					<span ng-message="pattern">Only numerics are allowed</span>
+					<span ng-message="minlength">Atleast 10 digits required</span>
+					<span ng-message="maxlength">Only 10 digits are allowed</span>
+				</span>
+			</div>
+			<button class="btn btn-primary" >Submit</button>
+		</form>
+		<pre>
+		{{contactForm | json}}
+		</pre>
+	</div>
+</div>
