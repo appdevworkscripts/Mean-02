@@ -17,17 +17,13 @@ app.config(function($routeProvider){
 	*/
 	$routeProvider.when('/a',{
 		templateUrl:'views/a.html'
-	});
-	$routeProvider.when('/b',{
+	}).when('/b',{
 		templateUrl:'views/b.html',
 		controller:'BCtrl'
-	});
-	$routeProvider.when('/c/:id',{
+	}).when('/c/:id',{
 		templateUrl:'views/c.html',
 		controller:'CCtrl'
-	});
-	// /d?id=45
-	$routeProvider.when('/d',{
+	}).when('/d',{
 		templateUrl:'views/c.html',
 		controller:'DCtrl'
 	});
